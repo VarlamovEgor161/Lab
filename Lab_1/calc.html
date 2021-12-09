@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="description">
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+          </p>
+        </div>
+        <div class="phone">
+          <a hreff="">+7 (900) 555-55-55</a>
+        </div>
+      </header>
+      <main>
+        <div class="content">
+          <h1>Калькулятор</h1>
+
+          <div class="calc">
+            <form name="calc_form" onsubmit="return validate_form ( );">
+              <input
+                type="text"
+                onkeyup="this.value = this.value.replace(/[^\d]/g,'');"
+                name="a"
+                id="a"
+              /><span> X<sup>2</sup> + </span>
+              <input
+                type="text"
+                onkeyup="this.value = this.value.replace(/[^\d]/g,'');"
+                name="b"
+                id="b"
+              /><span>
+                X +
+              </span>
+              <input
+                type="text"
+                onkeyup="this.value = this.value.replace(/[^\d]/g,'');"
+                name="c"
+                id="c"
+              />
+              <span> = 0</span>
+            </form>
+            <button id="calc_button" onclick="validate()">
+              Решить квадратное уравнение
+            </button>
+          </div>
+          <div class="box">
+            <h2>Решение уравнения:</h2>
+            <div class="decision" id="reh_gl">
+              <p>Введенный пример:</p>
+              <p>
+                <span id="pr_1"></span>X<sup>2</sup> + <span id="pr_2"></span>X
+                + <span id="pr_3"></span> = 0
+              </p>
+              <p>Решение:</p>
+              <p>Найдем дискриминант</p>
+              <p>
+                D = b<sup>2</sup> - 4ac = <span id="pr_2_1"></span
+                ><sup>2</sup> - 4 * <span id="pr_1_1"></span> *
+                <span id="pr_3_1"></span> =
+                <span id="desc"></span>
+              </p>
+              <p id="otr">Дискриминант меньше нуля, решение не имеет смысла</p>
+              <div id="reh_x">
+                <p>
+                  <span>X1 = <span id="x_1"></span></span><br />
+                  <span>X2 = <span id="x_2"></span></span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar">
+          <ul class="menu">
+            <li class="item1"><a href="/index.html">Главная</a></li>
+            <li class="item2"><a href="/info.html">О компании</a></li>
+            <li class="item3"><a href="/contact.html">Контакты</a></li>
+            <li class="item4"><a href="/calc.html">Калькулятор</a></li>
+          </ul>
+        </div>
+      </main>
+      <footer>
+        <div class="description">
+          <p>
+            Все права защищенны 2021
+          </p>
+        </div>
+        <div class="phone">
+          <a hreff="">+7 (900) 555-55-55</a>
+        </div>
+      </footer>
+    </div>
+    <script src="js/calc.js"></script>
+  </body>
+</html>
